@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+	<meta charset='utf-8' />
+	<title>WebPix</title>
+	<link rel="stylesheet" href="styles/main.css" />
+	
+	<!--Bootstrap.css -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme-papper.css" />	
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Laboratório de Mídias - Vídeo</a>
+		</div>				
+		</div>
+	</nav><!-- fim da navbar -->
+	
+	<div class="wrapper">			
+		<div class="controles">									
+			<a href="#" class="btn btn-primary btn-block" style="margin-top: 7px; border-radius: 10%;">
+				<span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+			</a>
+			
+			<a href="#" class="btn btn-primary btn-block" style="margin-top: 5px; border-radius: 10%;">
+				<span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+			</a>
+			
+			<a href="#" class="btn btn-primary btn-block controle-gatilho controle-botao controle-botao-disabled" style="margin-top: 5px; border-radius: 10%;">
+				<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+			</a>																	
+								
+			<a href="#" class="btn btn-primary btn-block controle-lixeira controle-botao controle-botao-disabled" style="margin-top: 5px; border-radius: 10%;">
+				<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+			</a>
+						
+			<a download="minha-foto.png" href="#" class="btn btn-primary btn-block controle-download controle-botao controle-botao-disabled" style="margin-top: 5px; border-radius: 10%;">
+				<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+			</a>			
+		</div>
+		<div class="lcd">
+			<video autoplay></video>
+			<img class="foto" />
+			<img class="fotoOriginal" style="display:none" />
+			<div class="permissao">
+				<img src="img/juarez.png" alt="" class="juarez" />
+				<div class="dialogo">
+					<h1>Libere o acesso a sua câmera!</h1>
+					<p>E vamos falar de <strong>Webpix</strong>, <br />que custa menos de R$1,00 por dia!</p>
+				</div>
+			</div>
+			<div class="borda"></div>
+		</div>
+		<canvas style="display:none"></canvas>
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/webpix.js"></script>
+	
+	<!--Bootstrap.js -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

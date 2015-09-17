@@ -1,0 +1,119 @@
+/* media querie com pequenos ajustes para quando o experimento estiver
+	rodando dentro do loopinfinito.com.br */
+/* Geral
+-------------------- */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: absolute;
+	width: 100%;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	height: 100%;	
+	background-color: #ccc !important;
+}
+
+.wrapper {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	margin-top: -216px;
+	margin-left: -350px;
+	width: 700px;
+	height: 432px;
+	box-shadow:0 1px 2px #aaa;
+	background:white;	
+	transform-origin:top left;
+}
+
+.lcd {
+	position: absolute;
+	top: 7px;
+	right: 50px;
+	width: 557px;
+	height: 418px;
+	background-color: #242415;
+	box-shadow: inset 0 0 10px #000000;
+	overflow: hidden;
+}
+
+video {
+	width: 100%;
+	box-shadow: inset 0 0 10px #000000;
+	display: none;
+}
+
+.foto {
+	display:none;
+	width: 100%;
+}
+
+.borda {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+	top: 0px;
+	box-shadow: inset 0px 0px 12px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Permissão
+-------------------- */
+
+.permissao {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+
+.dialogo {
+	position: absolute;
+	width: 400px;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 6px;
+	left: 50%;
+	margin-left: -200px;
+	top: 40px;
+	font-weight: 300;
+	text-align: center;
+	color: #CCC;
+	display: block;
+	padding: 5px 20px 15px 20px;
+	border: 5px solid rgba(255,255,255,0.2);
+}
+
+	.dialogo h1 {
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	.dialogo p {
+		font-size: 15px;
+		line-height: 22px;
+	}
+
+.juarez {
+	position: absolute;
+	bottom: -40px;
+	left: 130px;
+}
+
+
+/* Controles
+-------------------- */
+
+.controles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 90px;
+	height: 432px;
+}
+
+.controle-botao-disabled {
+	opacity: 0.5;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pt-BR">
 <head>
-	<meta charset='utf-8' />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>WebPix</title>
 	<link rel="stylesheet" href="styles/main.css" />
 	
@@ -12,6 +12,16 @@
 	<style type="text/css">		
 		ul li {
 			font-size: 30px;
+		}
+		#recordingslist {
+			list-style: none;		 	
+		}		
+		#recordingslist li a{
+			font-size: 0.9em;		 	
+		}
+		#recordingslist audio { 
+			display: block;
+		 	margin-bottom: 10px;		 	
 		}
 	</style>
 </head>
@@ -37,14 +47,14 @@
 			<!-- Nav tabs -->
 			<div class="card">
 				<ul class="nav nav-tabs nav-justified" role="tablist">
-					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-camera tab" aria-hidden="true"></span> Câmera</a></li>
-					<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-headphones tab" aria-hidden="true"></span> Áudio</a></li>
-					<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-facetime-video tab" aria-hidden="true"></span> Vídeo</a></li>					
+					<li role="presentation" class="active"><a href="#camera" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-camera tab" aria-hidden="true"></span> Câmera</a></li>
+					<li role="presentation"><a href="#audio" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-headphones tab" aria-hidden="true"></span> Áudio</a></li>
+					<li role="presentation"><a href="#video" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-facetime-video tab" aria-hidden="true"></span> Vídeo</a></li>					
 				</ul>
 
 				<!-- Tab panes -->
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="home" style="height: 500px;">
+					<div role="tabpanel" class="tab-pane active" id="camera" style="height: 500px;">
 						<div class="wrapper">			
 							<div class="controles">															
 								<a href="#" class="btn btn-primary btn-block controle-gatilho controle-botao controle-botao-disabled" style="margin-top: 5px; border-radius: 10%;">
@@ -75,13 +85,19 @@
 							<canvas style="display:none"></canvas>
 						</div>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="profile" style="height: 500px;">
+					<div role="tabpanel" class="tab-pane" id="audio" style="height: 500px;">
 						<center>
-						 	<h1 class="glyphicon glyphicon-thumbs-up" style="font-size:14em;color:#55518a"></h1>
-							  <h2 style="margin-top: 0;color:#55518a">Em construção...</h2>
+							<div>
+						 		<button class="btn btn-primary" onclick="startRecording(this);">Play</button>
+  								<button class="btn btn-primary" onclick="stopRecording(this);" disabled>Stop</button>
+  							<div>
+  							<div>
+  								<h2>Áudios</h2>
+  								<ul id="recordingslist"></ul>
+  							</div>	
 						</center>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="messages" style="height: 500px;">
+					<div role="tabpanel" class="tab-pane" id="video" style="height: 500px;">
 						<center>
 						 	<h1 class="glyphicon glyphicon-thumbs-up" style="font-size:14em;color:#55518a"></h1>
 							 <h2 style="margin-top: 0;color:#55518a">Em construção...</h2>
@@ -98,6 +114,10 @@
 <script src="assets/js/webpix.js"></script>	
 <!--Bootstrap.js -->
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- Arquivo js para captura de áudio -->
+<script src="assets/js/play-audio.js"></script>
+<script src="assets/js/recorder.js"></script>
+
 <script>	
 
 </script>	

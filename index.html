@@ -2,24 +2,42 @@
 <html lang="pt-BR">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>WebPix</title>
+	<title>#Laboratório de Mídias</title>
 	<link rel="stylesheet" href="styles/main.css" />
 	
 	<!--Bootstrap.css -->
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme-papper.css" />	
 
-	<style type="text/css">		
-		ul li {
-			font-size: 30px;
-		}
+	<style type="text/css">	
+		#listMenu li {
+			font-size: 1.9em;
+		}			
 		#recordingslist {
-			list-style: none;		 	
-		}				
+			margin-top: 20px;	 				
+		}					
 		#recordingslist audio { 
 			display: block;
 		 	margin-bottom: 1px;
-			margin-top: 10px; 		 	
+			margin-top: 10px; 					 	
+		}	
+		.badge {
+			font-size: 1.4em;
+			border-radius: 2px;		
+			margin-top: 10px;	
+			border: none;						
+		}	
+		.badge:hover {
+			background-color: gray;
+		}
+		span a {
+			color: #fff;						
+		}
+		span a:hover {
+			color: #fff;
+		}
+		.well {
+			margin-top: 20px;
 		}
 	</style>
 </head>
@@ -44,7 +62,7 @@
 		<div class="col-lg-12 col-md-12">
 			<!-- Nav tabs -->
 			<div class="card">
-				<ul class="nav nav-tabs nav-justified" role="tablist">
+				<ul class="nav nav-tabs nav-justified" role="tablist" id="listMenu">
 					<li role="presentation" class="active"><a href="#camera" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-camera tab" aria-hidden="true"></span> Câmera</a></li>
 					<li role="presentation"><a href="#audio" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-headphones tab" aria-hidden="true"></span> Áudio</a></li>
 					<li role="presentation"><a href="#video" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-facetime-video tab" aria-hidden="true"></span> Vídeo</a></li>					
@@ -80,19 +98,20 @@
 								</div>
 								<div class="borda"></div>
 							</div>
-							<canvas style="display:none"></canvas>
+							<canvas style="display:none"></canvas>							
 						</div>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="audio" style="height: 500px;">
 						<center>
-							<div>
-						 		<button class="btn btn-primary" onclick="startRecording(this);">Play</button>
-  								<button class="btn btn-primary" onclick="stopRecording(this);" disabled>Stop</button>
-  							<div>
-  							<div>
-  								<h2>Áudios</h2>
-  								<ul id="recordingslist"></ul>
-  							</div>	
+							<div>								
+						 		<button class="btn btn-primary" onclick="startRecording(this);"><span class="glyphicon glyphicon-play"></span>Play</button>
+  								<button class="btn btn-primary" onclick="stopRecording(this);" disabled><span class="glyphicon glyphicon-stop"></span>Stop</button>
+  							<div>							
+							<div class="row">	  
+								<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 well"> 								
+									<ul class="list-group" id="recordingslist"></ul>
+								</div>
+							</div>		
 						</center>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="video" style="height: 500px;">

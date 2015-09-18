@@ -38,17 +38,20 @@ function createDownloadLink() {
     var url = URL.createObjectURL(blob);
     var li = document.createElement('li');
     var au = document.createElement('audio');
-    var hf = document.createElement('a');        
-    hf.setAttribute("class", "btn btn-success");
+    var hf = document.createElement('a');     
+    var span = document.createElement('span');   
+    //hf.setAttribute("class", "btn btn-success");  
+    li.setAttribute("class", "list-group-item");
+    span.setAttribute("class", "badge");
     
     au.controls = true;
     au.src = url;
     hf.href = url;
     hf.download =  new Date().toISOString() + '.wav';
-    hf.innerHTML = '<span class="glyphicon glyphicon-download-alt" aria-hiiden="true"> Download</span>';
-    //hf.setAttribute("class", "bnt btn-primary");
-    li.appendChild(au);
-    li.appendChild(hf);
+    hf.innerHTML = '<span class="glyphicon glyphicon-download-alt">Download</span>';
+    span.appendChild(hf);
+    li.appendChild(span);    
+    li.appendChild(au);    
     recordingslist.appendChild(li);
   });
 }

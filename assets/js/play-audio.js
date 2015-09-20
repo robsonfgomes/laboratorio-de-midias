@@ -14,8 +14,9 @@ function startUserMedia(stream) {
 }
 
 function startRecording(button) {  
+  //document.getElementById('btnPlay').innerHTML  = "Gravando...";
   recorder && recorder.record();
-  button.disabled = true;
+  button.disabled = true;  
   button.nextElementSibling.disabled = false;
   //__log('Recording...');
 }
@@ -23,7 +24,7 @@ function startRecording(button) {
 function stopRecording(button) {  
   recorder && recorder.stop();
   button.disabled = true;
-  button.previousElementSibling.disabled = false;
+  button.previousElementSibling.disabled = false;  
   //__log('Stopped recording.');
   
   // create WAV download link using audio data blob

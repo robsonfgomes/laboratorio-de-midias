@@ -11,7 +11,7 @@ var webpix = ( function(){
 			// Eventos
 			// -------
 
-			webpix.pedePermissaoParaUsoCamera()			
+			webpix.pedePermissaoParaUsoCamera();			
 
 			//
 			$( '.controle-gatilho' ).click( function( event ) {
@@ -51,10 +51,10 @@ var webpix = ( function(){
 
 		iniciaStream: function( stream ) {
 			//
-			$( '.dialogo' ).animate( { top: '-620px' }, 400 )
+			$( '.dialogo' ).animate( { top: '-620px' }, 400 );
 			$( '.juarez' ).animate( { bottom: '-290px' }, 400, function(){
-				$( '.permissao' ).remove()
-			} )
+				$( '.permissao' ).remove();
+			} );
 
 			// mostra o vídeo após um determinado tempo para que a
 			// transição dos controles ocorra suave
@@ -146,4 +146,4 @@ var webpix = ( function(){
 	}
 
 	return webpix.init()
-})()
+})();

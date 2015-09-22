@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>#Laboratório de Mídias</title>
+	<link rel="stylesheet" href="styles/main.css" />
+	
+	<!--Bootstrap.css -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme-papper.css" />	
+
+	<style type="text/css">	
+		#listMenu li {
+			font-size: 1.9em;
+		}			
+		#recordingslist {
+			margin-top: 20px;	 				
+		}					
+		#recordingslist audio { 
+			display: block;
+		 	margin-bottom: 1px;
+			margin-top: 10px; 					 	
+		}	
+		.badge {
+			font-size: 1.4em;
+			border-radius: 2px;		
+			margin-top: 10px;	
+			border: none;						
+		}	
+		.badge:hover {
+			background-color: gray;
+		}
+		span a {
+			color: #fff;						
+		}
+		span a:hover {
+			color: #fff;
+		}
+		.well {
+			margin-top: 20px;
+		}
+		.tab-pane{
+			height: 500px;
+		}
+	</style>
+	
+</head>
+<body>
+<!--nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">Laboratório de Mídias - Vídeo</a>
+	</div>				
+	</div>
+</nav><!-- fim da navbar -->
+	
+<!--Inicio das tabs-->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 col-md-12">
+			<!-- Nav tabs -->
+			<div class="card">
+				<ul class="nav nav-tabs nav-justified" role="tablist" id="listMenu">
+					<li role="presentation" class="active"><a href="#camera" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-camera tab" aria-hidden="true"></span> Câmera</a></li>
+					<li><a href="audio.html"><span class="glyphicon glyphicon-headphones tab" aria-hidden="true"></span> Áudio</a></li>
+					<li><a href="video.html"><span class="glyphicon glyphicon-facetime-video tab" aria-hidden="true"></span> Vídeo</a></li>					
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="camera">
+						<div class="wrapper">			
+							<div class="controles">															
+								<a href="#" class="btn btn-primary btn-block controle-gatilho controle-botao controle-botao-disabled" style="margin-top: 5px; border-radius: 10%;">
+									<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+								</a>																	
+													
+								<a href="#" class="btn btn-primary btn-block controle-lixeira controle-botao controle-botao-disabled" style="margin-top: 5px; border-radius: 10%;">
+									<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+								</a>
+											
+								<a download="minha-foto.png" href="#" class="btn btn-primary btn-block controle-download controle-botao controle-botao-disabled" style="margin-top: 5px; border-radius: 10%;">
+									<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+								</a>			
+							</div>
+							<div class="lcd">
+								<video autoplay></video>
+								<img class="foto" />
+								<img class="fotoOriginal" style="display:none" />
+								<div class="permissao">
+									<img src="img/juarez.png" alt="" class="juarez" />
+									<div class="dialogo">
+										<h1>Libere o acesso a sua câmera!</h1>
+										<p>E vamos falar de <strong>Webpix</strong>, <br />que custa menos de R$1,00 por dia!</p>
+									</div>
+								</div>
+								<div class="borda"></div>
+							</div>
+							<canvas style="display:none"></canvas>							
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="audio">
+						<center>
+							<div>								
+						 		<button id="btnPlay" class="btn btn-primary" onclick="startRecording(this);"><span class="glyphicon glyphicon-play"></span>Play</button>
+  								<button id="btnRecord" class="btn btn-primary" onclick="stopRecording(this);" disabled><span class="glyphicon glyphicon-stop"></span>Stop</button>
+  							<div>							
+							<div class="row">	  
+								<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 well"> 								
+									<ul class="list-group" id="recordingslist"></ul>
+								</div>
+							</div>		
+						</center>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="video">
+						<center>							 												
+						</center>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Fim das tabs-->
+		
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/webpix.js"></script>	
+<!--Bootstrap.js -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script>	
+	//clear console	
+</script>	
+</body>
+</html>

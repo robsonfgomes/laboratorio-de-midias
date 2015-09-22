@@ -57,7 +57,7 @@ function turnOnCamera(e) {
     video.src = window.URL.createObjectURL(stream);
     finishVideoSetup_();
   }, function(e) {
-    alert('Fine, you get a movie instead of your beautiful face ;)');
+    alert('Por favor, verifique se seu computador possuí uma câmera instalada ;)');
 
     video.src = 'Chrome_ImF.mp4';
     finishVideoSetup_();
